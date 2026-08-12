@@ -1,9 +1,9 @@
-# Jiaji Guo
+# 郭家吉 · Jiaji Guo
 
 **Undergraduate Student**  
 Science and Technology College of Nanchang Hangkong University, China
 
-I am an undergraduate student interested in building reliable and auditable AI systems, especially long-lived AI agents that must reason over changing information and make decisions under explicit evidence and safety constraints.
+I am 郭家吉 (Jiaji Guo), an undergraduate student interested in building reliable and auditable AI systems, especially long-lived AI agents that must reason over changing information and make decisions under explicit evidence and safety constraints.
 
 ## Research Interests
 
@@ -27,6 +27,7 @@ My current research interests center on how long-lived AI agents can:
 
 ## Contact
 
+**Name:** 郭家吉 · Jiaji Guo  
 **Email:** 15015091629@163.com  
 **Affiliation:** Science and Technology College of Nanchang Hangkong University  
 **Location:** China
