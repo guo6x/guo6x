@@ -4,13 +4,14 @@
 
 **Aircraft Manufacturing Engineering · AI Systems · Aerospace Exploration**
 
-一名正在把远大理想拆成真实工程任务的本科生。
+让太空更近，从真实工程开始。
+\n*Engineering first. Evidence always.*
 
 [**中文**](./README.md)　·　[**English**](./README.en.md)　·　[**个人网站源码 / Portfolio source**](./index.html)　·　[**联系我 / Contact**](#联系与合作)
 
 </div>
 
-<p align="center"><img src="./assets/profile-banner.svg" alt="Jiaji Guo · Ideas become engineering · 面向太空的工程探索" width="100%"></p>
+<p align="center"><img src="./assets/stellar-banner.svg" alt="Jiaji Guo · Ideas become engineering · 面向太空的工程探索" width="100%"></p>
 
 ---
 
@@ -73,6 +74,14 @@
 ## 学习与生活
 
 除了工程，我也希望尝试音乐创作、练好钢琴、旅行以及走进自然。对我而言，技术最终应服务于人，人生也不该只剩下工作和代码。
+
+## 其他工程探索
+
+- **JG AI Glasses：** 探索单目透明 HUD、手机视觉理解、固件与交互设备的协同；目前仍属工程准备，非完成的实物产品。
+- **Yudei eVTOL：** 对站立式电动垂直起降飞行器进行人机工程、安全边界和控制概念研究，尚无经过验证的安全载人飞行结果。
+- **Mispricing Lab：** 研究市场数据与策略实验的自动化及风险复核，不代表已有可证明的投资收益。
+
+这些项目主要属于私有研发或早期探索，不提供未经确认的产品下载和公开演示。
 
 ## 联系与合作
 
