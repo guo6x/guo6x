@@ -1,241 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#071325">
-  <meta name="description" content="郭家吉 Jiaji Guo 的个人主页：飞行器制造工程、AI Agent、工程软件、航天探索与开源项目。">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="郭家吉 · Jiaji Guo | AI × Engineering × Space">
-  <meta property="og:description" content="把想法做成可运行、可验证的系统。飞行器制造工程、AI 工程和航天探索。">
-  <meta name="author" content="郭家吉 · Jiaji Guo">
-  <title>郭家吉 · Jiaji Guo | AI × Engineering × Space</title>
-  <style>
-    :root{color-scheme:dark;--bg:#071325;--card:#0d1f35;--card2:#102943;--text:#f2f8ff;--muted:#a9bdd4;--blue:#67c7ff;--line:rgba(163,207,247,.17);--gold:#b7dcff}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:95px}
-    body{margin:0;color:var(--text);background:radial-gradient(circle at 75% 2%,rgba(19,110,207,.22),transparent 33%),radial-gradient(circle at 5% 34%,rgba(31,95,150,.16),transparent 24%),var(--bg);font:16px/1.7 system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
-    a{color:inherit;text-decoration:none}
-    a:focus-visible{outline:3px solid var(--blue);outline-offset:4px;border-radius:4px}
-    .wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
-    .nav{position:sticky;top:0;z-index:10;background:rgba(7,19,37,.87);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
-    .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:74px}
-    .logo{font-weight:800;letter-spacing:-.03em;font-size:18px;white-space:nowrap}
-    .logo span{color:var(--blue)}
-    .nav-links{display:flex;align-items:center;gap:23px;color:var(--muted);font-size:14px}
-    .nav-links a:hover,.inline-link:hover{color:var(--blue)}
-    .nav-cta{border:1px solid rgba(103,199,255,.45);padding:8px 13px;border-radius:999px;color:var(--text)!important}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;padding:86px 0 86px;min-height:570px}
-    .eyebrow{color:var(--blue);font-size:13px;letter-spacing:.12em;font-weight:800;text-transform:uppercase}
-    h1,h2,h3,p{margin-top:0}
-    h1{font-size:clamp(46px,6.8vw,78px);line-height:1.06;letter-spacing:-.06em;margin:16px 0 12px}
-    .gradient{background:linear-gradient(110deg,#fff,#79cfff 70%,#86a9ff);background-clip:text;-webkit-background-clip:text;color:transparent}
-    .hero-en{font-size:clamp(17px,2.5vw,24px);font-weight:600;letter-spacing:-.02em;color:#d1e9fd;margin-bottom:17px}
-    .lead{color:var(--muted);font-size:18px;max-width:560px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-    .btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:10px 19px;border-radius:12px;font-weight:700;font-size:14px;border:1px solid var(--line);transition:transform .18s,border-color .18s}
-    .btn:hover{transform:translateY(-2px);border-color:var(--blue)}
-    .primary{background:linear-gradient(110deg,#66caff,#a0dfff);color:#06213b;border-color:transparent}
-    .secondary{background:rgba(255,255,255,.045)}
-    .hero-art{position:relative;min-height:370px;display:grid;place-items:center;isolation:isolate}
-    .hero-art:before{content:"";position:absolute;inset:11%;border-radius:50%;background:radial-gradient(circle,rgba(22,139,231,.20),transparent 70%);filter:blur(5px)}
-    .orbit{width:100%;max-width:455px;filter:drop-shadow(0 12px 30px rgba(35,155,240,.14))}
-    .art-label{position:absolute;bottom:8px;right:0;color:#97b7d2;font-size:11px;letter-spacing:.13em}
-    .strip{display:flex;gap:10px;flex-wrap:wrap;margin-top:-10px;margin-bottom:48px}
-    .chip{padding:7px 12px;border:1px solid var(--line);border-radius:99px;background:rgba(255,255,255,.025);color:#bbd0e6;font-size:13px}
-    section{padding:48px 0}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:25px}
-    .section-head h2{font-size:clamp(28px,3.5vw,39px);letter-spacing:-.04em;line-height:1.2;margin:5px 0}
-    .kicker{font-size:12px;letter-spacing:.18em;font-weight:800;color:var(--blue);text-transform:uppercase}
-    .section-head p{color:var(--muted);max-width:495px;margin:0;font-size:14px}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .project,.panel{background:linear-gradient(150deg,rgba(20,50,82,.9),rgba(11,28,48,.95));border:1px solid var(--line);border-radius:20px;padding:23px;min-width:0}
-    .project{display:flex;flex-direction:column;gap:12px;transition:transform .2s,border-color .2s}
-    .project:hover{transform:translateY(-4px);border-color:rgba(103,199,255,.5)}
-    .project-top{display:flex;justify-content:space-between;gap:8px;align-items:center}
-    .number{color:#77bce9;font-weight:800;font-size:12px;letter-spacing:.1em}
-    .pill{color:#bfe3ff;border:1px solid rgba(115,193,250,.23);background:rgba(86,156,216,.08);border-radius:100px;padding:3px 9px;font-size:11px}
-    .project h3{font-size:20px;line-height:1.3;margin:0;letter-spacing:-.025em}
-    .project p{color:var(--muted);font-size:14px;line-height:1.75;margin:0}
-    .state{margin-top:auto;padding-top:5px;color:#adc7de;font-size:12px}
-    .project a{align-self:flex-start;font-weight:700;font-size:13px;color:var(--blue);padding-top:3px}
-    .project a:hover{text-decoration:underline}
-    .values{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .panel h3{font-size:17px;margin:0 0 8px}
-    .panel p{color:var(--muted);font-size:14px;margin:0}
-    .about-card{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;align-items:center;padding:29px}
-    .about-card p{color:var(--muted);margin:0}
-    .edu{border-left:1px solid var(--line);padding-left:24px;font-size:14px;color:#c7dbec}
-    .edu strong{display:block;color:#fff;font-size:16px}
-    .contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
-    .contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-    .contact-copy{color:var(--muted);font-size:14px}
-    .qr-box{display:flex;align-items:center;gap:20px}
-    .qr-placeholder{width:116px;height:116px;flex:none;border:2px dashed rgba(132,190,235,.4);border-radius:14px;display:grid;place-items:center;color:#82c7f4;background:linear-gradient(135deg,rgba(103,199,255,.07),rgba(103,199,255,.01));font-weight:800;font-size:25px;letter-spacing:.1em}
-    .qr-box h3{margin:0 0 5px}
-    .qr-box p{margin:0;color:var(--muted);font-size:13px}
-    footer{border-top:1px solid var(--line);margin-top:44px;padding:25px 0 36px;color:#869db6;font-size:12px}
-    .footer-line{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-    @media(max-width:900px){.hero{grid-template-columns:1fr;padding:61px 0 43px;gap:8px}.hero-art{min-height:255px}.orbit{max-width:330px}.art-label{right:12%}.grid{grid-template-columns:repeat(2,1fr)}.values{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}}
-    @media(max-width:640px){.wrap{width:min(100% - 28px,1120px)}.nav-inner{min-height:64px}.nav-links{gap:12px}.nav-links a:not(.nav-cta){display:none}.hero{padding-top:52px}.hero-art{min-height:230px}.strip{margin-bottom:25px}.grid,.values,.about-card{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.edu{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.qr-box{align-items:flex-start}.project{min-height:0}section{padding:37px 0}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070e1b">
+<meta name="description" content="郭家吉的个人主页。飞行器制造工程本科生，探索 AI Agent、工程软件、飞控、开源产品和让更多人探索太空的长期理想。">
+<meta name="author" content="Jiaji Guo · 郭家吉">
+<meta property="og:type" content="website">
+<meta property="og:title" content="郭家吉 · Jiaji Guo | AI、工程与太空">
+<meta property="og:description" content="郭家吉的个人主页。飞行器制造工程本科生，探索 AI Agent、工程软件、飞控、开源产品和让更多人探索太空的长期理想。">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="alternate" hreflang="zh-CN" href="./">
+<link rel="alternate" hreflang="en" href="./en/">
+<title>郭家吉 · Jiaji Guo | AI、工程与太空</title>
 </head>
 <body>
-  <header class="nav">
-    <nav class="wrap nav-inner" aria-label="主导航">
-      <a href="#top" class="logo">郭家吉 <span>/ Jiaji Guo</span></a>
-      <div class="nav-links">
-        <a href="#about">关于</a><a href="#projects">项目</a><a href="#direction">方向</a><a href="#contact" class="nav-cta">联系我</a>
-      </div>
-    </nav>
-  </header>
-  <main id="top" class="wrap">
-    <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <div class="eyebrow">Aerospace Manufacturing · AI Engineering</div>
-        <h1 id="hero-title">郭家吉<span class="gradient">.</span></h1>
-        <div class="hero-en">Building for the physical world.</div>
-        <p class="lead">我正在学习如何让 AI、软件与飞行器工程真正协同工作：从能运行的原型，到可验证的系统，再到有机会走向现实世界的产品。</p>
-        <p class="lead">长期目标，是参与打造让普通人也能探索太空的航天事业。</p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">查看作品 ↗</a>
-          <a class="btn secondary" href="#contact">交流与合作</a>
-        </div>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <svg class="orbit" viewBox="0 0 500 450" role="img">
-          <defs>
-            <radialGradient id="planet"><stop offset="0%" stop-color="#99dfff"/><stop offset="45%" stop-color="#337cbf"/><stop offset="100%" stop-color="#103458"/></radialGradient>
-            <linearGradient id="ring"><stop stop-color="#66c5ff" stop-opacity=".1"/><stop offset=".48" stop-color="#9bdbff" stop-opacity=".95"/><stop offset="1" stop-color="#5599e1" stop-opacity=".1"/></linearGradient>
-          </defs>
-          <circle cx="252" cy="223" r="134" fill="none" stroke="#6eb9f2" stroke-opacity=".20"/>
-          <circle cx="252" cy="223" r="185" fill="none" stroke="#6eb9f2" stroke-opacity=".11" stroke-dasharray="4 12"/>
-          <ellipse cx="251" cy="229" rx="227" ry="80" transform="rotate(-30 251 229)" fill="none" stroke="url(#ring)" stroke-width="2"/>
-          <circle cx="252" cy="222" r="96" fill="url(#planet)"/>
-          <path d="M181 170 Q270 199 313 142 M168 237 Q240 269 342 230 M186 281 Q243 254 327 290" fill="none" stroke="#b0e6ff" stroke-opacity=".17" stroke-width="10"/>
-          <circle cx="93" cy="314" r="7" fill="#a2dfff"/>
-          <circle cx="405" cy="134" r="4" fill="#a2dfff"/>
-          <circle cx="432" cy="354" r="2" fill="#8abcf9"/>
-          <path d="M363 68 L368 80 L380 85 L368 90 L363 102 L358 90 L346 85 L358 80Z" fill="#bce5ff" opacity=".8"/>
-          <path d="M104 101 L107 108 L114 111 L107 114 L104 121 L101 114 L94 111 L101 108Z" fill="#bce5ff" opacity=".5"/>
-          <path d="M252 126 L266 178 L256 171 L256 227 L248 227 L248 171 L238 178Z" fill="#f2fbff" opacity=".84"/>
-          <path d="M241 227 L263 227 L269 240 L235 240Z" fill="#8fd5ff" opacity=".9"/>
-          <path d="M243 243 L250 286 L256 243" fill="#72ccff" opacity=".35"/>
-        </svg>
-        <span class="art-label">IDEAS → PROTOTYPES → EVIDENCE</span>
-      </div>
-    </section>
-    <div class="strip" aria-label="关注领域">
-      <span class="chip">AI Agents</span><span class="chip">Engineering Software</span><span class="chip">Control & Embedded</span><span class="chip">Aerospace</span><span class="chip">Open Source</span>
-    </div>
-    <section id="about" aria-labelledby="about-title">
-      <div class="section-head">
-        <div><div class="kicker">01 / About</div><h2 id="about-title">关于我</h2></div>
-        <p>不以概念包装工程进展；关注可复现的软件结果、验证边界，以及真正需要解决的问题。</p>
-      </div>
-      <div class="panel about-card">
-        <div>
-          <h3>工程实践者，仍在学习。</h3>
-          <p>我是郭家吉（Jiaji Guo），飞行器制造工程本科在读。当前将 AI Agent 与工程工具的开发经验，逐步扩展到嵌入式、动力学、飞控与实验验证。既关心技术是否能做出来，也关心它是否真的有用。</p>
-        </div>
-        <div class="edu">
-          <span class="kicker">Education</span>
-          <strong>南昌航空大学科技学院</strong>
-          飞行器制造工程 · 本科<br>
-          2024 – 至今<br>
-          <span lang="en">Science and Technology College of Nanchang Hangkong University</span>
-        </div>
-      </div>
-    </section>
-    <section id="projects" aria-labelledby="projects-title">
-      <div class="section-head">
-        <div><div class="kicker">02 / Selected Work</div><h2 id="projects-title">正在构建的东西</h2></div>
-        <p>以下是公开仓库与一个私有研发方向。状态标签刻意保守，具体进展以各项目的证据和文档为准。</p>
-      </div>
-      <div class="grid">
-        <article class="project">
-          <div class="project-top"><span class="number">01 / SPACE</span><span class="pill">实验工程</span></div>
-          <h3>AI Rocket · Ad Astra</h3>
-          <p>围绕实验火箭与 EDF 推力矢量控制探索飞控、仿真、遥测、地面站和离线回放。</p>
-          <div class="state">软件侧已开展验证；物理与飞行验证未完成。</div>
-          <a href="https://github.com/guo6x/AI-rocket" target="_blank" rel="noopener noreferrer">查看仓库 ↗</a>
-        </article>
-        <article class="project">
-          <div class="project-top"><span class="number">02 / AI</span><span class="pill">持续研发</span></div>
-          <h3>Omni-Context</h3>
-          <p>探索长期运行的 AI Agent 如何评估证据、管理记忆、绑定执行决策，并在现实反馈不同步时重新判断。</p>
-          <div class="state">系统仍在开发；不宣称正式性能验证。</div>
-          <a href="https://github.com/guo6x/Omni-context" target="_blank" rel="noopener noreferrer">查看仓库 ↗</a>
-        </article>
-        <article class="project">
-          <div class="project-top"><span class="number">03 / PRODUCT</span><span class="pill">MVP</span></div>
-          <h3>FlowBreak</h3>
-          <p>用渐进式提醒与可选的阻断机制，帮助 Android 用户减少连续使用短视频和社交应用。</p>
-          <div class="state">发布准备阶段，尚未正式上架。</div>
-          <a href="https://github.com/guo6x/flowbreak" target="_blank" rel="noopener noreferrer">查看仓库 ↗</a>
-        </article>
-        <article class="project">
-          <div class="project-top"><span class="number">04 / PROTOCOL</span><span class="pill">草案</span></div>
-          <h3>AEP Standard</h3>
-          <p>探索大模型与边缘设备之间轻量、受约束的物理执行接口与协议边界。</p>
-          <div class="state">协议探索，不代表已成为行业标准。</div>
-          <a href="https://github.com/guo6x/AEP-Standard" target="_blank" rel="noopener noreferrer">查看仓库 ↗</a>
-        </article>
-        <article class="project">
-          <div class="project-top"><span class="number">05 / APP</span><span class="pill">开源二次开发</span></div>
-          <h3>DeltaStream</h3>
-          <p>基于 Moonlight Android（GPLv3）改造的 PC 到平板串流客户端，面向触控与低延迟交互体验。</p>
-          <div class="state">二次开发项目，尊重并遵循上游许可。</div>
-          <a href="https://github.com/guo6x/DeltaStream" target="_blank" rel="noopener noreferrer">查看仓库 ↗</a>
-        </article>
-        <article class="project">
-          <div class="project-top"><span class="number">06 / ENGINEERING</span><span class="pill">私有研发</span></div>
-          <h3>AeroForge</h3>
-          <p>探索把 AI 辅助推理、工程计算与可验证的机械设计工作流组织到同一工具链中。</p>
-          <div class="state">私有开发中，暂无公开仓库或成熟产品承诺。</div>
-          <a href="#contact">交流这个方向 ↗</a>
-        </article>
-      </div>
-      <p style="margin:17px 0 0;font-size:14px;color:var(--muted)">更多实验、代码和开源项目：<a class="inline-link" href="https://github.com/guo6x?tab=repositories" target="_blank" rel="noopener noreferrer">浏览全部公开仓库 ↗</a></p>
-    </section>
-    <section id="direction" aria-labelledby="direction-title">
-      <div class="section-head">
-        <div><div class="kicker">03 / What Matters</div><h2 id="direction-title">我关心的三件事</h2></div>
-        <p>项目会迭代，但判断一项工程有没有价值，始终要回到真实问题与可检查的证据。</p>
-      </div>
-      <div class="values">
-        <div class="panel"><h3>01 · 能否被验证</h3><p>测试通过不等于现实成功；软件、仿真与实物证据各有边界。</p></div>
-        <div class="panel"><h3>02 · 是否解决痛点</h3><p>优先做真正帮别人省时间、省成本或减少失误的工具。</p></div>
-        <div class="panel"><h3>03 · 是否走向长期目标</h3><p>以 AI 和工程产品积累能力，为未来的航天事业打基础。</p></div>
-      </div>
-    </section>
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="section-head">
-        <div><div class="kicker">04 / Connect</div><h2 id="contact-title">聊聊，一起做点有用的事</h2></div>
-        <p>欢迎就开源协作、AI 工具、工程软件、航天技术与产品合作联系我。</p>
-      </div>
-      <div class="contact-grid">
-        <div class="panel">
-          <h3>Contact / 联系方式</h3>
-          <p class="contact-copy">目前公开的联系方式只有 GitHub 和邮箱。其余社交账号会在核实后陆续添加。</p>
-          <div class="contact-actions">
-            <a class="btn primary" href="mailto:15015091629@163.com">发送邮件 ↗</a>
-            <a class="btn secondary" href="https://github.com/guo6x" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          </div>
-          <p class="contact-copy" style="margin:18px 0 0">15015091629@163.com</p>
-        </div>
-        <div class="panel qr-box" id="wechat">
-          <!-- OWNER QR SLOT: once approved, replace .qr-placeholder with an image element whose src is assets/wechat-qr.png; update README too. Do not upload an unapproved personal QR. -->
-          <div class="qr-placeholder" aria-label="个人微信二维码预留位置">微信</div>
-          <div>
-            <h3>微信 / WeChat</h3>
-            <p>二维码位置已预留。待本人提供个人二维码后显示，暂不放置无效图片或虚构账号。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer><div class="wrap footer-line"><span>© 2026 郭家吉 · Jiaji Guo</span><span>Build → Verify → Improve · Updated 2026-11-01</span></div></footer>
+<a href="#main" class="skip">跳转到正文</a>
+<header class="site-header"><div class="wrap topbar">
+<a class="brand" href="#top" aria-label="郭家吉个人主页"><span class="brand-mark" aria-hidden="true">GJ</span><span><span class="brand-title">郭家吉</span><span class="brand-sub">JIAJI GUO / INDEPENDENT BUILDER</span></span></a>
+<div class="nav-right"><nav class="navlinks" aria-label="主导航"><a href="#mission">愿景</a><a href="#work">作品</a><a href="#journey">经历</a><a href="#contact">联系</a></nav>
+<div class="language" aria-label="选择语言"><a href="./" lang="zh-CN" aria-current="page" title="中文">中</a><a href="./en/" lang="en"  title="English">EN</a></div></div>
+</div></header>
+<main id="main">
+<div class="wrap" id="top">
+<section class="hero" aria-labelledby="hero-heading">
+<div class="hero-copy">
+<div class="status-line"><span class="status-dot" aria-hidden="true"></span>个人任务档案 · 持续更新</div>
+<h1 class="hero-title " id="hero-heading">让太空更近。<br><span class="signature">从真实工程开始。</span></h1>
+<p class="hero-brief">我是<strong>郭家吉（Jiaji Guo）</strong>，飞行器制造工程本科生，也是一名在 AI、软件和实体工程之间不断试错的独立开发者。我想参与建立一种未来：<strong>普通人也有机会真正走向太空、探索未知。</strong></p>
+<div class="action-row"><a class="action primary" href="#work">看看我在做什么 <span aria-hidden="true">&nbsp; ↗</span></a><a class="action outline" href="#contact">谈合作与想法</a></div>
+</div>
+<div class="hero-visual"><img class="orbit" src="assets/mission-orbit.svg" width="620" height="600" alt="原创航天轨道任务示意图，用地球、轨道、航点象征长期探索" fetchpriority="high">
+<div class="corner right mono">LONG-TERM MISSION<br>ENGINEERING IN PROGRESS</div>
+<div class="corner left mono">GJ / 2026<br>VISION → ENGINEERING</div></div>
+</section>
+<div class="hero-bottom"><div class="inline-meta"><span>背景 <strong>飞行器制造工程</strong></span><span>方式 <strong>开发 · 验证 · 迭代</strong></span><span>状态 <strong>仍在路上</strong></span></div><span class="mono coordinate">41° / FUTURE-ORIENTED</span></div>
+<section class="section" id="mission" aria-labelledby="mission-heading">
+<div class="mission">
+<div class="mission-rail"><span class="overline">一条长期主线</span><p>不是一句口号，是要用很多年去接近的目标。</p></div>
+<div><h2 id="mission-heading" class="mission-copy">我想做的不只是“会写代码的工程师”，也不只是一个 AI 产品。<em>终点是推动普通人参与太空探索。</em></h2><p class="mission-text">这件事需要资金、组织、制造、控制、安全、基础科学和长期的工程积累。我目前还没有能力实现它。所以我选择从能独立推动的工作开始：构建有用的 AI 产品，用商业反馈锤炼解决问题的能力；再持续推进真正可检验的硬件和航天技术。理想可以很大，阶段结论必须诚实。</p></div>
+</div>
+<div class="mission-path" aria-label="长期行动路径">
+<div class="path-step"><span class="n mono">01</span><h3>用 AI 解决真实问题</h3><p>先找到愿意付费或实际使用的需求；让技术为别人节省时间、降低成本。</p></div>
+<div class="path-step"><span class="n mono">02</span><h3>建立可验证的工程能力</h3><p>把软件、控制、仿真、机械设计、测试证据串起来，承认能力和验证边界。</p></div>
+<div class="path-step"><span class="n mono">03</span><h3>走向开放的航天未来</h3><p>长期形成团队、产品、资金与技术积累；具体路径允许随着真实证据调整。</p></div>
+</div>
+</section>
+<section class="section" id="work" aria-labelledby="work-heading">
+<div class="section-heading work-head"><div><span class="overline">公开作品与研发</span><h2 id="work-heading">少一点概念，<br>多一点证据。</h2></div><p>下列项目跨 AI、产品与航空航天。公开仓库是可核验的工作记录；私有项目只介绍方向，不公开代码或敏感细节。</p></div>
+<article class="featured-work">
+<div class="featured-content"><span class="project-eyebrow">航天 / 实验工程</span><h3 class="project-title">AI Rocket · Project Ad Astra</h3><p>一个围绕小型实验火箭与 EDF 推力矢量控制的软硬件协同项目，覆盖飞控固件、地面站、动力学仿真、遥测与确定性离线回放。它也是我用真实工程约束学习控制理论的地方。</p><a class="project-link" href="https://github.com/guo6x/AI-rocket" target="_blank" rel="noopener noreferrer">查看公开仓库 <span aria-hidden="true">↗</span></a></div>
+<div class="featured-aside"><div class="aside-word" aria-hidden="true">Ad<br>Astra.</div><div class="aside-desc"><span class="overline">CURRENT EVIDENCE</span><br>离线软件回放与测试已有记录；尚未获得实物系统与飞行合格性验证。历史 CAD 不代表制造放行。</div></div>
+</article>
+<div class="project-stack"><article class="project">
+<div class="top"><span class="project-eyebrow">AI / 可信智能体</span><span class="mono project-index">02</span></div>
+<h3>Omni-Context</h3><p>帮助长期运行的 AI Agent 检查证据有效性、记录决策依据，并根据执行后的真实反馈重新判断。</p><span class="state">研究与开发中；正式效果仍需评测</span>
+<a class="project-link" href="https://github.com/guo6x/Omni-context" target="_blank" rel="noopener noreferrer">查看公开仓库 <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project">
+<div class="top"><span class="project-eyebrow">工程软件 / 私有研发</span><span class="mono project-index">03</span></div>
+<h3>AeroForge</h3><p>探索 AI 辅助机械工程研发：从任务约束、计算与设计，到有界执行和独立评价。</p><span class="state">工程原型；仍有待验证能力</span>
+<a class="project-link" href="#contact">了解合作方式 <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project">
+<div class="top"><span class="project-eyebrow">数字健康 / Android</span><span class="mono project-index">04</span></div>
+<h3>FlowBreak</h3><p>针对短视频与社交应用连续使用的渐进式干预工具，强调本地运行与用户控制。</p><span class="state">MVP；发布准备中</span>
+<a class="project-link" href="https://github.com/guo6x/flowbreak" target="_blank" rel="noopener noreferrer">查看公开仓库 <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project">
+<div class="top"><span class="project-eyebrow">AI 内容生产 / 私有研发</span><span class="mono project-index">05</span></div>
+<h3>LocalMiniDrama</h3><p>探索用结构化剧本、分镜、图片与视频工作流减少短剧生产的重复劳动。</p><span class="state">实验产线；质量仍在迭代</span>
+<a class="project-link" href="#contact">了解合作方式 <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project">
+<div class="top"><span class="project-eyebrow">边缘设备 / 协议</span><span class="mono project-index">06</span></div>
+<h3>AEP Standard</h3><p>研究大模型与低成本嵌入式设备之间轻量、受约束的物理执行协议。</p><span class="state">草案与探索；非行业标准</span>
+<a class="project-link" href="https://github.com/guo6x/AEP-Standard" target="_blank" rel="noopener noreferrer">查看公开仓库 <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project">
+<div class="top"><span class="project-eyebrow">开源客户端 / Android</span><span class="mono project-index">07</span></div>
+<h3>DeltaStream</h3><p>基于 Moonlight Android（GPLv3）二次开发，探索面向平板触控的低延迟 PC 串流体验。</p><span class="state">开发项目；基于上游开源</span>
+<a class="project-link" href="https://github.com/guo6x/DeltaStream" target="_blank" rel="noopener noreferrer">查看公开仓库 <span aria-hidden="true">↗</span></a>
+</article></div>
+<div class="lab-line"><article class="lab-card"><h3>飞控与仿真</h3><p>学习从控制律与软件回放走向台架验证的完整证据链；将“代码能运行”和“系统可安全运行”严格区分。</p></article><article class="lab-card"><h3>DeepSeek Harness · dsh-pilot</h3><p>为智能体增加可观察、可接管的真实浏览器操作能力：结构化 DOM 快照、引用式点击与会话隔离。<a href="https://github.com/guo6x/dsh-pilot" target="_blank" rel="noopener noreferrer">查看插件仓库 ↗</a></p></article></div>
+<p class="project-footnote">所有状态说明均为审慎摘要。具体测试范围、缺陷与适用性以对应项目仓库文档为准，尤其不能把软件回归当作硬件安全证明。 <a href="https://github.com/guo6x?tab=repositories" target="_blank" rel="noopener noreferrer">更多公开项目 ↗</a></p>
+</section>
+<section class="section" id="journey" aria-labelledby="journey-heading">
+<div class="bio-layout">
+<div class="bio-intro"><span class="overline">路径与个人</span><h2 id="journey-heading">我是谁，<br>为什么出发。</h2><p>2024 年，我开始系统学习飞行器制造工程。与此同时，我持续通过开源开发、独立项目和工程实验，补足课堂与真实工程之间的距离。</p><p>我喜欢研究新工具，但真正吸引我的不是技术名词，而是技术能否改变现实。未来我可能创业、进入工程团队、继续深造——路径尚未锁定，长期方向始终指向航天。</p><p>工作之外，我也想慢慢学习音乐创作与钢琴，去旅行、接近自然。人生不必只有一个维度。</p></div>
+<div class="timeline"><div class="timeline-row"><div class="timeline-time">2024 —</div><div><h3>工程学业起点</h3><p>进入南昌航空大学科技学院，学习飞行器制造工程。开始用工程项目连接理论与实践。</p></div></div>
+<div class="timeline-row"><div class="timeline-time">2026</div><div><h3>软件开发与实践</h3><p>在杭州完成暑期实习，参与 AI 工作流及协作软件相关开发；继续推进独立开源与工程项目。</p></div></div>
+<div class="timeline-row"><div class="timeline-time">现在</div><div><h3>建立作品与证据</h3><p>围绕 AI Agent、工程软件、飞控仿真和小产品验证持续迭代；比功能数量更关心是否有真实结果。</p></div></div>
+<div class="timeline-row"><div class="timeline-time">长期</div><div><h3>向太空迈进</h3><p>逐步形成能力、团队与资源，寻找让更多人参与太空探索的可行道路。</p></div></div></div>
+</div>
+<div class="principle-banner"><strong>Build. Test. Learn. Repeat.</strong><p>做出来；验证它；修正错误；继续向前。对工程结果保持敬畏，比讲一个完美故事重要。</p></div>
+</section>
+<section class="section" id="contact" aria-labelledby="contact-heading">
+<div class="contact-layout">
+<div class="contact-main"><span class="overline">联系与合作</span><h2 id="contact-heading">如果你也相信<br>好的技术应该落地。</h2><p>欢迎讨论开源协作、AI 自动化、工程软件、科研与航天探索，尤其愿意和有真实问题、愿意共同验证方案的人交流。初步联系请用邮件或 GitHub。</p>
+<div class="contact-links"><a href="mailto:15015091629@163.com">发邮件给我 ↗</a><a href="https://github.com/guo6x" target="_blank" rel="noopener noreferrer">访问我的 GitHub ↗</a></div>
+<p style="margin-top:20px;font-size:12px" class="muted">15015091629@163.com</p>
+</div>
+<div class="contact-qr"><!-- WeChat insertion point: only add the image after owner's explicit confirmation.
+Replace .qr-placeholder with <img src="assets/wechat-qr.png" alt="Personal WeChat QR code" width="126" height="126" loading="lazy"> (English path: ../assets/wechat-qr.png). -->
+<div class="qr-placeholder" aria-label="个人微信二维码预留位置"><span>二维码<br>预留</span></div>
+<div class="qr-caption"><h3>微信 / WeChat</h3><p>待本人提供并确认个人二维码后上线。这里不会显示虚构账号或未经授权的信息。</p></div></div>
+</div>
+<p class="project-footnote">其他社交账号（B站、公众号、小红书等）将在确认准确链接后陆续添加。</p>
+</section>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap footer-content"><p>© 2026 郭家吉 / Jiaji Guo<br>个人工程记录 · 对成果负责，对未知保持好奇</p><p>内容更新：2026 年 11 月</p></div></footer>
 </body>
 </html>
