@@ -54,6 +54,14 @@
 
 查看 [**所有公开仓库**](https://github.com/guo6x?tab=repositories)。项目 README、工程文档和可复现实验记录优先于这里的简短介绍。
 
+## 可以直接核验的工程记录
+
+以下材料包含测试范围、验证边界和仍未解决的问题，不只是宣传截图。
+
+- [AI Rocket · 离线回放手册](https://github.com/guo6x/AI-rocket/blob/main/docs/SYSTEM_V1_OFFLINE_REPLAY_RUNBOOK.md) — 能核验的软件回放与测试边界，不代表实物飞行资格。
+- [Omni-Context · 产品基线](https://github.com/guo6x/Omni-context/blob/main/docs/PRODUCT-BASELINE.md) — 公开说明已验证内容、正式结论与尚未解决的问题。
+- [FlowBreak · 当前状态](https://github.com/guo6x/flowbreak/blob/master/docs/CURRENT_STATUS.md) — 直接查看测试、缺陷与发布准备现状。
+
 ## 我如何推进这个理想
 
 1. **近期：** 研究真实痛点，开发 AI 工具与软件产品，寻找能被用户验证的价值。
