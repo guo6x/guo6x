@@ -32,17 +32,17 @@ Ideas adapted, not copied verbatim or presented as endorsements:
 
 We do not include or ship third-party skill code. Copy and assets are original.
 
-## Add a confirmed WeChat QR / 添加本人确认的微信二维码
+## Published WeChat contact / 已上线的微信入口
 
-1. Obtain the **personal** WeChat QR code from the profile owner and confirm that they intend to publish it. Do not publish a work-team QR or a code from someone else.
-2. Save the image as `assets/wechat-qr.png`. Avoid unrelated EXIF metadata if possible.
-3. In `index.html` and `en/index.html`, replace the `.qr-placeholder` element with a proper `<img>` tag:
-   - Chinese: `src="assets/wechat-qr.png"`
-   - English: `src="../assets/wechat-qr.png"`
-   - Add meaningful language-specific `alt`, and `width="126" height="126" loading="lazy"`.
-4. Embed the approved image in both READMEs and change the placeholder text.
-5. Open both pages and verify the QR can be scanned from a real phone.
-6. If that code expires, remove or replace it promptly.
+**Owner-approved as of 2026-11-01:** the owner supplied their personal WeChat QR screenshot and explicitly asked for it to be embedded publicly.
+
+- `assets/wechat-qr.svg` contains a compact, original vector rendering of the **same decoded WeChat contact URL** (no avatar, region text or profile screenshot metadata).
+- The original screenshot and its cropped derivative are **not** published. Only the QR payload and the approved public contact URL are used.
+- Both `index.html` and `en/index.html` embed the SVG using correct relative paths and provide a direct mobile-friendly WeChat contact link.
+- Both GitHub READMEs include a linked SVG QR code; do not publish an unapproved WeChat ID, phone number or any extra social usernames.
+- Local verification: the supplied screenshot decoded to the same link; the vector was rendered at 166, 190, 220 and 600 pixels and programmatically decoded successfully at each size.
+- **Not yet verified:** physical handset scan and the live deployed website. Test both before claiming end-to-end production validation.
+- The WeChat contact URL or QR may expire or change. If that happens, ask the owner for a current screenshot, verify the decoded value, regenerate SVG, update bilingual pages and retest scanning.
 
 ## Add verified public social links / 社交平台入口
 
@@ -66,6 +66,29 @@ For a project site the likely Pages path is `https://guo6x.github.io/guo6x/`, bu
 - Distinguish **software tests**, **simulation**, **physical bench tests**, and **flight qualification**.
 - Update both languages together whenever projects, contact info or affiliation changes.
 - Avoid posting sensitive financial details, partner information, or personal travel data in the portfolio.
+
+## Review & next improvements / 复盘与下一步
+
+### Completed in this iteration
+
+- Actual, owner-approved WeChat QR replaces the nonfunctional placeholder in both locales and both READMEs.
+- Mobile visitors can also tap a direct contact link rather than attempting to scan their own screen.
+- QR modules have the original contact data, high contrast, a four-module quiet zone and a scalable format.
+- A three-item **Engineering Evidence** area links to real public source documentation for AI Rocket, Omni-Context and FlowBreak, including limitations rather than marketing-only claims.
+
+### Remaining acceptance gates (not claimed as completed)
+
+1. **P0 · Live site:** Confirm GitHub Pages has been enabled and the real Chinese and English pages are reachable. If needed, go to Settings → Pages and select main/(root); check the actual published URL. Never equate a GitHub commit with a deployed webpage.
+2. **P0 · Human scan:** Test the published QR with a separate phone using WeChat and test direct contact links on Android and iOS. Programmatic QR decode does not prove the WeChat application accepts the link.
+3. **P1 · Browser visual QA:** Use a real browser and screenshots at 320/390/768/1024/1440px, check overflow and correct page language, test keyboard navigation, color contrast and social link behavior.
+4. **P1 · Authentic product demos:** Add selected, owner-approved real photos, screenshots, reproducible demonstrations and short outcome-focused case studies; avoid invented metrics or polished mockups that imply hardware has been tested.
+5. **P1 · Social verification:** Add only actual verified Bilibili/WeChat Official Account/Xiaohongshu/other social URLs. Decide which accounts genuinely need public exposure.
+6. **P2 · Distribution:** Consider a custom domain and a photographic/project-specific share image compatible with social preview crawlers once actual site publication is confirmed. Current SVG-based branding may not be used as an OG preview by every platform.
+7. **P2 · Outcome evidence:** Add user feedback, released builds, external collaborations or verified impact only when independently substantiated.
+
+### Design critique
+
+The core narrative and bilingual consistency are now substantially clearer, but the profile still depends too heavily on words and a conceptual orbit image. The strongest next enhancement would be **real evidence-rich project stories**, not more animation, glow, badges or generic technical claims. Project count is not the same as proof of impact.
 
 ## Accessibility & QA
 
