@@ -6,7 +6,7 @@
 
 An undergraduate builder turning a distant ambition into testable engineering work.
 
-[**中文**](./README.md)　·　[**English**](./README.en.md)　·　[**Portfolio**](./en/index.html)　·　[**Contact**](#contact--collaboration)
+[**中文**](./README.md)　·　[**English**](./README.en.md)　·　[**Portfolio source**](./en/index.html)　·　[**Contact**](#contact--collaboration)
 
 </div>
 
