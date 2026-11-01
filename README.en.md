@@ -72,15 +72,12 @@ I'm open to conversations about **open source, AI products, engineering software
 
 - **Email:** [15015091629@163.com](mailto:15015091629@163.com)
 - **GitHub:** [@guo6x](https://github.com/guo6x)
-- **WeChat:** An approved personal QR code will be added later.
+- **WeChat:** [Scan the QR code or open the contact link](https://u.wechat.com/ENzA9MDYw4TcaK3T-xYNANU?s=4).
 - **Other platforms:** Public links will be added once the exact accounts are confirmed.
 
-<!-- OWNER MAINTENANCE
-When approved, add assets/wechat-qr.png and embed it in both README.md and README.en.md.
-Replace QR placeholders in index.html and en/index.html with language-correct relative paths.
-Never publish unapproved personal identifiers or private repository details.
-See DESIGN.md for maintenance and deployment.
--->
+<p align="center"><a href="https://u.wechat.com/ENzA9MDYw4TcaK3T-xYNANU?s=4"><img src="./assets/wechat-qr.svg" alt="Jiaji Guo's personal WeChat QR code" width="220"></a></p>
+
+<p align="center"><sub>On mobile, tap the code to open WeChat; on desktop, scan it using WeChat.</sub></p>
 
 ---
 
