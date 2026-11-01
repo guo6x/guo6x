@@ -1,99 +1,61 @@
-# Design & maintenance / 设计与维护说明
+# Portfolio design and publishing guide
 
-## Purpose / 目标
+This repository serves two distinct surfaces: a **GitHub profile README** and a **bilingual static portfolio**. It is a personal, evidence-aware engineering journal, not a flight-qualified product website.
 
-Public profile and portfolio for Jiaji Guo (郭家吉), an aircraft manufacturing engineering undergraduate working across AI software and aerospace experiments.
+## Design direction: aerospace editorial × engineering evidence
 
-**Audience:** open-source collaborators, engineering teams, researchers, potential product partners, and interested international visitors.
+The brand is built around one visual idea: **an aspirational orbital mission map**, paired with documented engineering work. Use deliberate visual hierarchy rather than a collection of interchangeable SaaS cards.
 
-**Brand direction:** aerospace mission log — original technical orbit diagram, deliberately restrained deep-space blues, readable typography, and evidence-qualified engineering content.
+**Palette:** deep navy `#030b15`, abyss `#071425`, ice white `#f2f8ff`, cyan `#91dfff`, muted technical blue `#8aa9c1`, cautious amber `#e2c997`. Cyan identifies a primary action or verified navigational target; amber signals validation status and boundaries.
 
-This is a personal portfolio **not** an academic appointment, certified aerospace product catalogue, or a promise that physical-flight testing has been completed.
+**Typography:** a Chinese serif display family (Noto Serif SC / Source Han Serif SC with fallbacks) for the mission statements; Georgia for English display; restrained CJK-friendly sans serif for body text. Monospace appears only for useful engineering metadata.
 
-## Site map / 文件
+**Layout rhythm:** a cinematic full-width hero, editorial statement, three asymmetrical project exhibits with **original conceptual diagrams**, grouped smaller projects with **actual category filters**, an evolving multi-stage path, explicit evidence links, a grounded personal timeline and a large contact zone with verified WeChat QR.
 
-- `README.md` — GitHub profile, Chinese.
-- `README.en.md` — full English GitHub profile.
-- `index.html` — Chinese static portfolio landing page.
-- `en/index.html` — English static portfolio landing page.
-- `assets/site.css` — shared styles and responsive breakpoints.
-- `assets/mission-orbit.svg` — original vector illustration; it represents a concept, not hardware/flight evidence.
-- `assets/favicon.svg` — original site mark.
+**Motion:** one hero entrance and action-driven interactions. No perpetual particle simulation, autoplay audio or attention-hijacking animations; honor reduced-motion preferences.
 
-The site has **no build step, npm dependency, externally loaded JS, external image dependency, cookie, analytics tracker, or external web font**. Language switching uses ordinary links, so both versions are indexable and usable without JavaScript.
+## Files
 
-## External design references / 借鉴的开源 Skills
+- `index.html`: complete Chinese portfolio.
+- `en/index.html`: complete English portfolio; both versions share section order.
+- `assets/stellar-site.css`: shared responsive visual system.
+- `assets/stellar-site.js`: tiny progressive-enhancement script for filters, page progress and active navigation.
+- `assets/stellar-orbit.svg`: concept illustration for the North Star, **not actual flight data**.
+- `assets/project-{rocket,agent,cad}.svg`: project-specific original concept diagrams; no claim of actual manufactured CAD.
+- `assets/stellar-banner.svg`: GitHub profile art shared by both READMEs.
+- `assets/wechat-qr.svg`: approved personal contact QR; always keep the SVG data unchanged unless the owner supplies a new one.
+- `scripts/check-portfolio.mjs`: no-dependency local integrity checker.
+- `.github/workflows/profile-quality.yml`: static checks for PRs and pushes.
+- `README.md`, `README.en.md`: bilingual GitHub profile narratives.
 
-Ideas adapted, not copied verbatim or presented as endorsements:
+## Open-source design inspirations
 
-- [Anthropic · frontend-design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) — subject-specific visual language, memorable hero, typography, and avoidance of generic card-grid templates.
-- [Vercel Labs · web-design-guidelines](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines) — semantic HTML, focus-visible states, predictable navigation, viewport responsiveness, performance, legible copy and accessible locale links.
-- [Awesome GitHub Profile README gallery](https://github.com/astra-intelligence/awesome-github-profile-readme-1) — profile hierarchy, discoverability and short project summaries.
+These are sources for workflow and interaction ideas, **not copied UI templates** and not dependencies of this site.
 
-We do not include or ship third-party skill code. Copy and assets are original.
+- [Anthropic frontend-design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md): strong visual direction, typography, hierarchy, meaningful layouts and anti-template self-critique.
+- [Vercel web-design-guidelines](https://github.com/vercel-labs/agent-skills): focus states, accessible motion, responsive behavior, meaningful controls and performance review.
+- [React Bits](https://github.com/DavidHDev/react-bits): studied ideas for background composition and purposeful interaction; the site uses original CSS/JS instead of importing its React components.
+- [Motion Primitives](https://github.com/ibelick/motion-primitives): studied fine-grained transitions and restraint; no React dependency is bundled.
+- [Magic UI portfolio](https://github.com/magicuidesign/portfolio): studied portfolio narrative and project discoverability, without copying assets or site implementation.
 
-## Published WeChat contact / 已上线的微信入口
+Each source has its own license. This site intentionally ships independent, original HTML/CSS/JS/SVG and retains no third-party source snippets.
 
-**Owner-approved as of 2026-11-01:** the owner supplied their personal WeChat QR screenshot and explicitly asked for it to be embedded publicly.
+## Engineering accuracy policy
 
-- `assets/wechat-qr.svg` contains a compact, original vector rendering of the **same decoded WeChat contact URL** (no avatar, region text or profile screenshot metadata).
-- The original screenshot and its cropped derivative are **not** published. Only the QR payload and the approved public contact URL are used.
-- Both `index.html` and `en/index.html` embed the SVG using correct relative paths and provide a direct mobile-friendly WeChat contact link.
-- Both GitHub READMEs include a linked SVG QR code; do not publish an unapproved WeChat ID, phone number or any extra social usernames.
-- Local verification: the supplied screenshot decoded to the same link; the vector was rendered at 166, 190, 220 and 600 pixels and programmatically decoded successfully at each size.
-- **Not yet verified:** physical handset scan and the live deployed website. Test both before claiming end-to-end production validation.
-- The WeChat contact URL or QR may expire or change. If that happens, ask the owner for a current screenshot, verify the decoded value, regenerate SVG, update bilingual pages and retest scanning.
+- Clearly distinguish **software tests**, **simulations**, **bench evidence**, **manufacturing approval**, and **flight qualification**.
+- Do not invent customers, revenue, social handles, publications, certification, number of launches, downloads, usage counts or benchmark results.
+- All public URLs must be verified. Private projects stay high-level and should not expose confidential code, keys, financial accounts or physical safety assumptions.
+- Show approved early-stage personal hardware topics only as exploratory concepts.
+- The QR code is the owner's approved personal WeChat contact. Publicly showing it intentionally enables strangers to reach the owner. If it expires, replace it after owner confirmation and retest the target URL.
+- Keep both languages substantively aligned; check that any change to project status appears in both.
 
-## Add verified public social links / 社交平台入口
+## Acceptance and deployment gates
 
-Add exact public URLs to the contact area in both pages and to the contact sections of both READMEs. No guessing usernames; never put a personal phone number on a public page without approval.
+1. Run `node --check assets/stellar-site.js` and `node scripts/check-portfolio.mjs`.
+2. Verify the new visual site in **real browsers**, especially 320, 390, 768, 1024 and 1440 CSS pixels, with actual screenshots and keyboard navigation. A static check is not a browser screenshot test.
+3. Verify project references open the intended public repository and referenced evidence.
+4. Verify WeChat QR scanning in the actual WeChat client (ideally two separate devices). Programmatic decoding cannot guarantee app behavior.
+5. Confirm GitHub Pages has **actually** been enabled and the published root and English URLs load. A merged commit does not prove deployment. If needed select `main / (root)` in repository Settings → Pages.
+6. When real project screenshots or videos are available and owner-approved, replace some concept visuals with authentic demonstrations and concise case studies, including validation boundaries.
 
-## Deployment
-
-This repository contains static HTML compatible with GitHub Pages. If GitHub Pages is not enabled:
-
-1. In the repository **Settings → Pages**, use **Deploy from a branch**.
-2. Set **main** and **/(root)** and save.
-3. Once GitHub reports a public Pages URL, open it and verify both the root and `/en/` pages; do not assume deployment succeeded because a commit exists.
-
-For a project site the likely Pages path is `https://guo6x.github.io/guo6x/`, but do not advertise it until GitHub confirms it is live.
-
-## Editorial rules / 内容真实性
-
-- Project validation states must be supported by source repositories, not inferred from aspirations.
-- No false metrics (revenue, users, launches, certification, flight tests, GitHub stars).
-- Keep private projects described at a high level; do not expose code or confidential engineering constraints.
-- Distinguish **software tests**, **simulation**, **physical bench tests**, and **flight qualification**.
-- Update both languages together whenever projects, contact info or affiliation changes.
-- Avoid posting sensitive financial details, partner information, or personal travel data in the portfolio.
-
-## Review & next improvements / 复盘与下一步
-
-### Completed in this iteration
-
-- Actual, owner-approved WeChat QR replaces the nonfunctional placeholder in both locales and both READMEs.
-- Mobile visitors can also tap a direct contact link rather than attempting to scan their own screen.
-- QR modules have the original contact data, high contrast, a four-module quiet zone and a scalable format.
-- A three-item **Engineering Evidence** area links to real public source documentation for AI Rocket, Omni-Context and FlowBreak, including limitations rather than marketing-only claims.
-
-### Remaining acceptance gates (not claimed as completed)
-
-1. **P0 · Live site:** Confirm GitHub Pages has been enabled and the real Chinese and English pages are reachable. If needed, go to Settings → Pages and select main/(root); check the actual published URL. Never equate a GitHub commit with a deployed webpage.
-2. **P0 · Human scan:** Test the published QR with a separate phone using WeChat and test direct contact links on Android and iOS. Programmatic QR decode does not prove the WeChat application accepts the link.
-3. **P1 · Browser visual QA:** Use a real browser and screenshots at 320/390/768/1024/1440px, check overflow and correct page language, test keyboard navigation, color contrast and social link behavior.
-4. **P1 · Authentic product demos:** Add selected, owner-approved real photos, screenshots, reproducible demonstrations and short outcome-focused case studies; avoid invented metrics or polished mockups that imply hardware has been tested.
-5. **P1 · Social verification:** Add only actual verified Bilibili/WeChat Official Account/Xiaohongshu/other social URLs. Decide which accounts genuinely need public exposure.
-6. **P2 · Distribution:** Consider a custom domain and a photographic/project-specific share image compatible with social preview crawlers once actual site publication is confirmed. Current SVG-based branding may not be used as an OG preview by every platform.
-7. **P2 · Outcome evidence:** Add user feedback, released builds, external collaborations or verified impact only when independently substantiated.
-
-### Design critique
-
-The core narrative and bilingual consistency are now substantially clearer, but the profile still depends too heavily on words and a conceptual orbit image. The strongest next enhancement would be **real evidence-rich project stories**, not more animation, glow, badges or generic technical claims. Project count is not the same as proof of impact.
-
-## Accessibility & QA
-
-- Verify both locale pages with JavaScript disabled.
-- Check at 320, 390, 768, 1024 and 1440 CSS-pixel widths for overflow and readability.
-- Test the keyboard skip link, language controls and all project links.
-- Check headings hierarchy, image alternative text and no dead contact links.
-- Confirm the current viewport works with `prefers-reduced-motion` and browser zoom.
+This repository intentionally has no build pipeline or npm dependency for the published site. JavaScript is progressive enhancement; basic content, project links and contact methods remain usable without it.
