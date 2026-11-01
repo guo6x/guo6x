@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 410" width="1400" height="410" role="img" aria-labelledby="title desc">
+<title id="title">Jiaji Guo — build toward the stars</title>
+<desc id="desc">Original dark blue orbital engineering identity banner with fine navigation grids and a distant illuminated planet.</desc>
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071626"/><stop offset=".6" stop-color="#081b32"/><stop offset="1" stop-color="#06101e"/></linearGradient>
+<radialGradient id="p" cx="24%" cy="22%"><stop stop-color="#3f7eaf"/><stop offset=".4" stop-color="#1d446c"/><stop offset="1" stop-color="#0a1d33"/></radialGradient>
+<linearGradient id="a" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6bbefa" stop-opacity="0"/><stop offset=".35" stop-color="#a8e4ff" stop-opacity=".85"/><stop offset="1" stop-color="#8bd5ff" stop-opacity=".07"/></linearGradient>
+<pattern id="grid" width="55" height="55" patternUnits="userSpaceOnUse"><path d="M55 0H0V55" fill="none" stroke="#87b3d1" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="1400" height="410" fill="url(#g)"/><rect width="1400" height="410" fill="url(#grid)"/>
+<circle cx="1100" cy="215" r="183" fill="url(#p)" stroke="#96dafc" stroke-opacity=".38" stroke-width="2"/>
+<circle cx="1100" cy="215" r="198" fill="none" stroke="#96dafc" stroke-opacity=".13" stroke-width="8"/>
+<circle cx="1100" cy="215" r="245" fill="none" stroke="#96dafc" stroke-opacity=".13" stroke-dasharray="4 13"/>
+<ellipse cx="1100" cy="215" rx="328" ry="100" transform="rotate(-26 1100 215)" fill="none" stroke="url(#a)" stroke-width="2.2"/>
+<path d="M830 324l510-250" stroke="#9ed8ff" stroke-opacity=".35" stroke-dasharray="4 12"/>
+<circle cx="1286" cy="107" r="8" fill="#d1f1ff"/><circle cx="1286" cy="107" r="17" fill="none" stroke="#c0eaff" stroke-opacity=".55"/>
+<g fill="#a1c3da" font-family="monospace" font-size="13" letter-spacing="3"><text x="70" y="66">J.G. / PERSONAL ENGINEERING JOURNAL</text><text x="71" y="352">AIRCRAFT MANUFACTURING  /  AI SYSTEMS  /  AEROSPACE</text><text x="1185" y="358" font-size="11" opacity=".72">NORTH STAR  /  2026</text></g>
+<text x="66" y="178" fill="#f2faff" font-family="Georgia,serif" font-size="75" font-style="italic">Build toward the stars.</text>
+<text x="72" y="245" fill="#bfd9ec" font-family="Noto Sans SC,Microsoft YaHei,sans-serif" font-size="30">让太空更近，从真实工程开始。</text>
+<path d="M72 289H800" stroke="#9ad8fa" stroke-opacity=".37"/>
+</svg>
