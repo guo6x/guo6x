@@ -10,6 +10,8 @@ An undergraduate builder turning a distant ambition into testable engineering wo
 
 </div>
 
+<p align="center"><img src="./assets/profile-banner.svg" alt="Jiaji Guo · Ideas become engineering · 面向太空的工程探索" width="100%"></p>
+
 ---
 
 ## My north star
