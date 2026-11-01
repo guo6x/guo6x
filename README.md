@@ -72,15 +72,12 @@
 
 - **邮箱：** [15015091629@163.com](mailto:15015091629@163.com)
 - **GitHub：** [@guo6x](https://github.com/guo6x)
-- **微信：** 个人二维码位置预留；在我确认并提供图片后补充。
+- **微信：** [扫码或打开微信联系人链接](https://u.wechat.com/ENzA9MDYw4TcaK3T-xYNANU?s=4)（已公开个人二维码）
 - **其他平台：** B 站、公众号、小红书等账号链接待确认后开放。
 
-<!-- OWNER MAINTENANCE
-When approved, add assets/wechat-qr.png and embed it in both README.md and README.en.md.
-Replace QR placeholders in index.html and en/index.html with language-correct relative paths.
-Never publish unapproved personal identifiers or private repository details.
-See DESIGN.md for maintenance and deployment.
--->
+<p align="center"><a href="https://u.wechat.com/ENzA9MDYw4TcaK3T-xYNANU?s=4"><img src="./assets/wechat-qr.svg" alt="郭家吉的个人微信二维码 / Jiaji Guo's WeChat QR code" width="220"></a></p>
+
+<p align="center"><sub>手机上点击二维码即可打开微信联系人链接；电脑上可用微信扫码添加。</sub></p>
 
 ---
 
