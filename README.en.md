@@ -4,13 +4,13 @@
 
 **Aircraft Manufacturing Engineering · AI Systems · Aerospace Exploration**
 
-An undergraduate builder turning a distant ambition into testable engineering work.
+Building a practical path from AI systems and engineering tools toward more accessible space exploration.
 
 [**中文**](./README.md)　·　[**English**](./README.en.md)　·　[**Portfolio source**](./en/index.html)　·　[**Contact**](#contact--collaboration)
 
 </div>
 
-<p align="center"><img src="./assets/profile-banner.svg" alt="Jiaji Guo · Ideas become engineering · 面向太空的工程探索" width="100%"></p>
+<p align="center"><img src="./assets/stellar-banner.svg" alt="Jiaji Guo · Ideas become engineering · 面向太空的工程探索" width="100%"></p>
 
 ---
 
@@ -73,6 +73,14 @@ These are directions for exploration—not a promised timeline or a claim about 
 ## Beyond engineering
 
 I also hope to write my own music, improve at piano, travel and spend time in nature. Technology should ultimately serve people, and a meaningful life has more than one dimension.
+
+## Further explorations
+
+- **JG AI Glasses:** An early-stage monocular HUD and smartphone-assisted perception concept; software preparation does not mean finished wearable hardware.
+- **Yudei eVTOL:** Human factors, safety constraints and control concepts for a stand-up electric VTOL platform; no claim of safe crewed flight verification.
+- **Mispricing Lab:** Research automation for market data, reproducible experiments and risk review; no claim of investment performance.
+
+These are predominantly private or exploratory engineering directions, not released products or public demos.
 
 ## Contact & collaboration
 
