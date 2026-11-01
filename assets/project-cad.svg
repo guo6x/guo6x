@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-labelledby="t d"><title id="t">AI engineering CAD workflow concept</title><desc id="d">Abstract wireframe of a mechanical bracket and schematic constraints. It is illustrative, not an approved manufacturable part.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102f4e"/><stop offset="1" stop-color="#091624"/></linearGradient></defs>
+<rect width="760" height="560" fill="url(#bg)"/>
+<g stroke="#8dbad8" stroke-opacity=".12" stroke-width=".7"><path d="M0 0V560"/><path d="M48 0V560"/><path d="M96 0V560"/><path d="M144 0V560"/><path d="M192 0V560"/><path d="M240 0V560"/><path d="M288 0V560"/><path d="M336 0V560"/><path d="M384 0V560"/><path d="M432 0V560"/><path d="M480 0V560"/><path d="M528 0V560"/><path d="M576 0V560"/><path d="M624 0V560"/><path d="M672 0V560"/><path d="M720 0V560"/><path d="M0 0H760"/><path d="M0 48H760"/><path d="M0 96H760"/><path d="M0 144H760"/><path d="M0 192H760"/><path d="M0 240H760"/><path d="M0 288H760"/><path d="M0 336H760"/><path d="M0 384H760"/><path d="M0 432H760"/><path d="M0 480H760"/><path d="M0 528H760"/></g>
+<g fill="#1b456b" fill-opacity=".3" stroke="#afddff" stroke-width="2">
+<path d="M178 380l241 83 178-106-243-83z"/>
+<path d="M178 380V275l241 83v105"/>
+<path d="M419 358l178-106v105l-178 106"/>
+<path d="M244 302V151l123-68 162 56v166l-111 69z"/>
+<path d="M244 151l161 56 124-68M405 207v166"/>
+<path d="M327 184v135l71 24"/>
+</g>
+<g fill="none" stroke="#afddff" stroke-opacity=".6" stroke-width="1.4"><ellipse cx="343" cy="397" rx="19" ry="10" transform="rotate(18 343 397)"/><ellipse cx="512" cy="352" rx="18" ry="9" transform="rotate(-30 512 352)"/><path d="M175 251l-42-30M598 259l45-24M243 152L206 111M529 140l50-38M178 421v47h241M420 466h178"/></g>
+<g stroke="#95d3fa" fill="none" stroke-width="1.2" stroke-dasharray="5 7" opacity=".8"><path d="M151 185v299M612 114v363M150 493h460M222 79h371"/></g>
+<g fill="#c1e7ff" font-family="monospace" font-size="15"><text x="24" y="37" font-size="12">AEROFORGE / CONSTRAINT STUDY</text><text x="39" y="207">H / ?</text><text x="361" y="512">L / ?</text><text x="567" y="95">W / ?</text><text x="25" y="535" font-size="12" opacity=".58">CONCEPT ART ONLY — NOT RELEASED CAD</text></g></svg>
