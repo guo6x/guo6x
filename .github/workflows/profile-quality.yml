@@ -1,0 +1,32 @@
+name: Portfolio integrity
+on:
+  push:
+    paths:
+      - "index.html"
+      - "en/**"
+      - "assets/**"
+      - "README*.md"
+      - "DESIGN.md"
+      - "AGENTS.md"
+      - "scripts/check-portfolio.mjs"
+      - ".github/workflows/profile-quality.yml"
+  pull_request:
+    paths:
+      - "index.html"
+      - "en/**"
+      - "assets/**"
+      - "README*.md"
+      - "DESIGN.md"
+      - "AGENTS.md"
+      - "scripts/check-portfolio.mjs"
+      - ".github/workflows/profile-quality.yml"
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --check assets/stellar-site.js
+      - run: node scripts/check-portfolio.mjs
