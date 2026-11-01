@@ -46,7 +46,7 @@
 | **[Omni-Context](https://github.com/guo6x/Omni-context)** | 长期 AI Agent 的证据审查、决策追溯、执行后反馈与修正 | 研发中，正式效果仍待检验 |
 | **AeroForge** | AI 辅助机械工程的任务约束、计算、设计和独立评价 | 私有工程原型 |
 | **[FlowBreak](https://github.com/guo6x/flowbreak)** | Android 数字健康：减少连续使用短视频/社交应用 | MVP，发布准备中 |
-| **LocalMiniDrama** | 用结构化分镜、图像与视频工作流探索 AI 短剧生产效率 | 私有实验产线 |
+| **[dsh-pilot](https://github.com/guo6x/dsh-pilot)** | DeepSeek Harness 的真实浏览器自动化：DOM 快照、引用式交互、可观察会话 | 开源插件，持续迭代 |\n| **LocalMiniDrama** | 用结构化分镜、图像与视频工作流探索 AI 短剧生产效率 | 私有实验产线 |
 | **[AEP Standard](https://github.com/guo6x/AEP-Standard)** | 大模型与嵌入式设备之间的轻量物理执行接口 | 探索性协议草案 |
 | **[DeltaStream](https://github.com/guo6x/DeltaStream)** | 基于 Moonlight Android 的平板友好型 PC 串流客户端 | 开源二次开发，遵循 GPLv3 |
 
