@@ -10,6 +10,8 @@
 
 </div>
 
+<p align="center"><img src="./assets/profile-banner.svg" alt="Jiaji Guo · Ideas become engineering · 面向太空的工程探索" width="100%"></p>
+
 ---
 
 ## 我的长期目标
