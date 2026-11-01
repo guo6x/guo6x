@@ -54,6 +54,14 @@ I enjoy crossing disciplines, but I do not confuse a working prototype with a de
 
 Explore [**all public repositories**](https://github.com/guo6x?tab=repositories). Individual repositories and their engineering evidence take precedence over this summary.
 
+## Engineering evidence you can inspect
+
+These documents contain technical boundaries and issues, not just screenshots or promotional claims.
+
+- [AI Rocket · Offline replay runbook](https://github.com/guo6x/AI-rocket/blob/main/docs/SYSTEM_V1_OFFLINE_REPLAY_RUNBOOK.md) — Documented offline software replay; not evidence of flight qualification.
+- [Omni-Context · Product baseline](https://github.com/guo6x/Omni-context/blob/main/docs/PRODUCT-BASELINE.md) — Published baseline identity, known limits and unproven claims.
+- [FlowBreak · Current status](https://github.com/guo6x/flowbreak/blob/master/docs/CURRENT_STATUS.md) — Current testing, outstanding issues and release readiness.
+
 ## A practical path toward space
 
 1. **Now:** Find genuine user problems, develop AI tools and test whether they deliver useful value.
