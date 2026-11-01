@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<title id="title">Jiaji Guo — ideas become engineering</title>
+<desc id="desc">Original navy-blue portfolio banner with an orbital schematic, highlighting aircraft manufacturing, AI systems and a long-term ambition toward space.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a1a30"/><stop offset="1" stop-color="#06101e"/></linearGradient>
+<linearGradient id="arc"><stop stop-color="#3579ba" stop-opacity=".2"/><stop offset=".5" stop-color="#83d6ff" stop-opacity=".96"/><stop offset="1" stop-color="#9edbff" stop-opacity=".1"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#2373ad" stop-opacity=".33"/><stop offset="1" stop-color="#2373ad" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#8dbbdc" stroke-opacity=".09" stroke-width="1"/></pattern>
+</defs>
+<rect width="1200" height="320" fill="url(#bg)"/><rect width="1200" height="320" fill="url(#grid)"/>
+<circle cx="973" cy="169" r="240" fill="url(#glow)"/>
+<circle cx="972" cy="166" r="99" fill="#143559" stroke="#80b9e3" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="972" cy="166" r="143" fill="none" stroke="#8ec8ed" stroke-opacity=".14" stroke-dasharray="4 8"/>
+<ellipse cx="969" cy="169" rx="262" ry="83" transform="rotate(-29 969 169)" stroke="url(#arc)" stroke-width="2.6" fill="none"/>
+<path d="M780 278l347-211" stroke="#9cd9fb" stroke-opacity=".3" stroke-dasharray="5 11" fill="none"/>
+<circle cx="1104" cy="85" r="7" fill="#c8edff"/><circle cx="1104" cy="85" r="16" stroke="#9fdcff" stroke-opacity=".5" fill="none"/>
+<path d="M1104 63V37M1124 85h39" stroke="#9fdcff" stroke-opacity=".45"/>
+<g fill="#7aafd2" font-family="monospace" font-size="12" letter-spacing="2"><text x="60" y="61">GJ / PERSONAL MISSION LOG</text><text x="60" y="277">AI SYSTEMS  /  ENGINEERING  /  AEROSPACE</text></g>
+<text x="58" y="160" fill="#f4f9ff" font-family="Georgia, serif" font-size="53" font-style="italic">Ideas become engineering.</text>
+<text x="61" y="204" fill="#a4c4dd" font-family="system-ui, 'Noto Sans CJK SC', sans-serif" font-size="22">向着太空，从可验证的工作开始。</text>
+<path d="M60 231h540" stroke="#9edaff" stroke-opacity=".33"/>
+</svg>
