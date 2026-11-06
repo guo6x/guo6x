@@ -9,6 +9,7 @@ on:
       - "DESIGN.md"
       - "AGENTS.md"
       - "scripts/check-portfolio.mjs"
+      - "scripts/test-readme.mjs"
       - ".github/workflows/profile-quality.yml"
   pull_request:
     paths:
@@ -19,6 +20,7 @@ on:
       - "DESIGN.md"
       - "AGENTS.md"
       - "scripts/check-portfolio.mjs"
+      - "scripts/test-readme.mjs"
       - ".github/workflows/profile-quality.yml"
 jobs:
   static-checks:
@@ -30,3 +32,4 @@ jobs:
           node-version: "22"
       - run: node --check assets/stellar-site.js
       - run: node scripts/check-portfolio.mjs
+      - run: node scripts/test-readme.mjs

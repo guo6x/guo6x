@@ -48,7 +48,8 @@ I enjoy crossing disciplines, but I do not confuse a working prototype with a de
 | **[Omni-Context](https://github.com/guo6x/Omni-context)** | Evidence qualification, decision lineage and feedback-based correction for long-lived AI agents | Research in progress; performance not formally proven |
 | **AeroForge** | AI-assisted mechanical engineering, constrained workflows, calculations and independent evaluation | Private engineering prototype |
 | **[FlowBreak](https://github.com/guo6x/flowbreak)** | Android digital wellbeing through progressive interventions in prolonged app use | MVP, pre-release |
-| **[dsh-pilot](https://github.com/guo6x/dsh-pilot)** | Browser automation for DeepSeek Harness with inspectable DOM snapshots, reference-driven interaction and user oversight | Open-source plugin in active iteration |\n| **LocalMiniDrama** | AI production workflows spanning storyboards, images and short-form video | Private experimental pipeline |
+| **[dsh-pilot](https://github.com/guo6x/dsh-pilot)** | Browser automation for DeepSeek Harness with inspectable DOM snapshots, reference-driven interaction and user oversight | Open-source plugin in active iteration |
+| **LocalMiniDrama** | AI production workflows spanning storyboards, images and short-form video | Private experimental pipeline |
 | **[AEP Standard](https://github.com/guo6x/AEP-Standard)** | Lightweight, constrained physical execution interfaces for AI and embedded devices | Exploratory protocol draft |
 | **[DeltaStream](https://github.com/guo6x/DeltaStream)** | Tablet-oriented PC streaming based on Moonlight Android | Open-source adaptation under GPLv3 |
 

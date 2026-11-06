@@ -9,7 +9,7 @@ Before visual changes, read `DESIGN.md` and review these public skills:
 Honor the existing static bilingual GitHub Pages architecture. Do not introduce React/Next.js, npm dependencies, remote fonts, large 3D engines, decorative autoplay media or analytics without a demonstrated need.
 
 When editing:
-1. Work in a branch, write the conceptual design goal, and then implement.
+1. Work directly on `main`, as explicitly requested by the owner. Do not create branches or pull requests. Inspect the remote HEAD and a clean worktree, test before committing, and use a normal fast-forward push; never force-push. Preserve the existing design unless the task calls for a redesign.
 2. Keep `index.html` and `en/index.html` content and structure aligned.
 3. Retain a visible high-quality first screen, strong contrast and responsive mobile layouts.
 4. Keep all claims evidence-qualified. The rocket's software tests are not physical-flight approval.

@@ -1,0 +1,573 @@
+{
+  "baseline": "1a0b6ed284b337da8384b18a9c16b0bf91264a78",
+  "created": "2026-11-06T09:41:54.975Z",
+  "source_sha256": {
+    "index.html": "018fd13e11176530959877fc060440bd08700590dfddaf55c094358bdfba0d60",
+    "en/index.html": "49ccd6f443cdd4e7e75a4720c538b878d3501db1f548678c12d097beb4a97ebc",
+    "assets/stellar-site.css": "68b1e5e0db2b65e37c5959c83cdea44308ec3f6a4c6054274c9c7877f6d2d663",
+    "assets/stellar-site.js": "c81b0b78bdcb85a3b42ef67428a542f24f73b62e67d3a37b6edf6000605c9bbf",
+    "README.md": "b1d8f8ba5d71e722dee9ee6ac71a7bb65960d4e18fc4e8ff53a51e308e993def",
+    "README.en.md": "d87aa81c494a364a80a1ae502866f772667c36f628be7e4e93a4cc129c2c5877",
+    "assets/wechat-qr.svg": "eaff57d1389ee52782730487230f9cb57f32cbe1367014398abc55b9206c2f95"
+  },
+  "markdown_renderer": [
+    {
+      "name": "README.md",
+      "version": "before",
+      "renderer": "GitHub POST /markdown (gfm)",
+      "rows": 7,
+      "cellsPerRow": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "localMiniDramaVisible": false,
+      "dshPilotVisible": true,
+      "escapeVisible": true
+    },
+    {
+      "name": "README.md",
+      "version": "after",
+      "renderer": "GitHub POST /markdown (gfm)",
+      "rows": 8,
+      "cellsPerRow": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "localMiniDramaVisible": true,
+      "dshPilotVisible": true,
+      "escapeVisible": false
+    },
+    {
+      "name": "README.en.md",
+      "version": "before",
+      "renderer": "GitHub POST /markdown (gfm)",
+      "rows": 7,
+      "cellsPerRow": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "localMiniDramaVisible": false,
+      "dshPilotVisible": true,
+      "escapeVisible": false
+    },
+    {
+      "name": "README.en.md",
+      "version": "after",
+      "renderer": "GitHub POST /markdown (gfm)",
+      "rows": 8,
+      "cellsPerRow": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "localMiniDramaVisible": true,
+      "dshPilotVisible": true,
+      "escapeVisible": false
+    }
+  ],
+  "readme_regression": {
+    "passed": 44,
+    "failed": 0
+  },
+  "browser": {
+    "engine": "Chrome / Chromium, headless, Windows",
+    "environment": "local HTTP server with project-site /guo6x/ prefix",
+    "widths": [
+      320,
+      360,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "locales": [
+      "zh-CN",
+      "en"
+    ],
+    "passed": 115,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "zh/320 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "zh/320 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "zh/320 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "zh/320 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "zh/320 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "zh/320 filter ai",
+        "ok": true
+      },
+      {
+        "name": "zh/320 filter product",
+        "ok": true
+      },
+      {
+        "name": "zh/320 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "zh/320 filter all",
+        "ok": true
+      },
+      {
+        "name": "zh/360 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "zh/360 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "zh/360 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "zh/360 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "zh/360 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "zh/360 filter ai",
+        "ok": true
+      },
+      {
+        "name": "zh/360 filter product",
+        "ok": true
+      },
+      {
+        "name": "zh/360 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "zh/360 filter all",
+        "ok": true
+      },
+      {
+        "name": "zh/390 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "zh/390 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "zh/390 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "zh/390 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "zh/390 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "zh/390 filter ai",
+        "ok": true
+      },
+      {
+        "name": "zh/390 filter product",
+        "ok": true
+      },
+      {
+        "name": "zh/390 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "zh/390 filter all",
+        "ok": true
+      },
+      {
+        "name": "zh/768 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "zh/768 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "zh/768 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "zh/768 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "zh/768 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "zh/768 filter ai",
+        "ok": true
+      },
+      {
+        "name": "zh/768 filter product",
+        "ok": true
+      },
+      {
+        "name": "zh/768 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "zh/768 filter all",
+        "ok": true
+      },
+      {
+        "name": "zh/1024 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "zh/1024 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "zh/1024 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "zh/1024 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "zh/1024 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "zh/1024 filter ai",
+        "ok": true
+      },
+      {
+        "name": "zh/1024 filter product",
+        "ok": true
+      },
+      {
+        "name": "zh/1024 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "zh/1024 filter all",
+        "ok": true
+      },
+      {
+        "name": "zh/1440 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "zh/1440 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "zh/1440 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "zh/1440 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "zh/1440 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "zh/1440 filter ai",
+        "ok": true
+      },
+      {
+        "name": "zh/1440 filter product",
+        "ok": true
+      },
+      {
+        "name": "zh/1440 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "zh/1440 filter all",
+        "ok": true
+      },
+      {
+        "name": "zh keyboard skip link",
+        "ok": true
+      },
+      {
+        "name": "zh language switch",
+        "ok": true
+      },
+      {
+        "name": "en/320 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "en/320 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "en/320 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "en/320 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "en/320 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "en/320 filter ai",
+        "ok": true
+      },
+      {
+        "name": "en/320 filter product",
+        "ok": true
+      },
+      {
+        "name": "en/320 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "en/320 filter all",
+        "ok": true
+      },
+      {
+        "name": "en/360 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "en/360 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "en/360 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "en/360 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "en/360 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "en/360 filter ai",
+        "ok": true
+      },
+      {
+        "name": "en/360 filter product",
+        "ok": true
+      },
+      {
+        "name": "en/360 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "en/360 filter all",
+        "ok": true
+      },
+      {
+        "name": "en/390 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "en/390 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "en/390 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "en/390 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "en/390 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "en/390 filter ai",
+        "ok": true
+      },
+      {
+        "name": "en/390 filter product",
+        "ok": true
+      },
+      {
+        "name": "en/390 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "en/390 filter all",
+        "ok": true
+      },
+      {
+        "name": "en/768 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "en/768 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "en/768 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "en/768 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "en/768 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "en/768 filter ai",
+        "ok": true
+      },
+      {
+        "name": "en/768 filter product",
+        "ok": true
+      },
+      {
+        "name": "en/768 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "en/768 filter all",
+        "ok": true
+      },
+      {
+        "name": "en/1024 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "en/1024 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "en/1024 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "en/1024 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "en/1024 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "en/1024 filter ai",
+        "ok": true
+      },
+      {
+        "name": "en/1024 filter product",
+        "ok": true
+      },
+      {
+        "name": "en/1024 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "en/1024 filter all",
+        "ok": true
+      },
+      {
+        "name": "en/1440 viewport and no horizontal overflow",
+        "ok": true
+      },
+      {
+        "name": "en/1440 navigation and CTA clearance",
+        "ok": true
+      },
+      {
+        "name": "en/1440 headings are not clipped",
+        "ok": true
+      },
+      {
+        "name": "en/1440 mobile navigation",
+        "ok": true
+      },
+      {
+        "name": "en/1440 resources and reduced motion",
+        "ok": true
+      },
+      {
+        "name": "en/1440 filter ai",
+        "ok": true
+      },
+      {
+        "name": "en/1440 filter product",
+        "ok": true
+      },
+      {
+        "name": "en/1440 filter engineering",
+        "ok": true
+      },
+      {
+        "name": "en/1440 filter all",
+        "ok": true
+      },
+      {
+        "name": "en keyboard skip link",
+        "ok": true
+      },
+      {
+        "name": "en language switch",
+        "ok": true
+      },
+      {
+        "name": "zh no-JavaScript content",
+        "ok": true
+      },
+      {
+        "name": "en no-JavaScript content",
+        "ok": true
+      },
+      {
+        "name": "No page exceptions or failed HTTP resources",
+        "ok": true
+      }
+    ]
+  }
+}

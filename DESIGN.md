@@ -24,7 +24,8 @@ The brand is built around one visual idea: **an aspirational orbital mission map
 - `assets/project-{rocket,agent,cad}.svg`: project-specific original concept diagrams; no claim of actual manufactured CAD.
 - `assets/stellar-banner.svg`: GitHub profile art shared by both READMEs.
 - `assets/wechat-qr.svg`: approved personal contact QR; always keep the SVG data unchanged unless the owner supplies a new one.
-- `scripts/check-portfolio.mjs`: no-dependency local integrity checker.
+- `scripts/check-portfolio.mjs`: no-dependency integrity checker, including README line-break and three-column table validation.
+- `scripts/test-readme.mjs`: 44 regression cases exercising the actual README gate, including reintroduced defects and valid code examples.
 - `.github/workflows/profile-quality.yml`: static checks for PRs and pushes.
 - `README.md`, `README.en.md`: bilingual GitHub profile narratives.
 
@@ -51,7 +52,7 @@ Each source has its own license. This site intentionally ships independent, orig
 
 ## Acceptance and deployment gates
 
-1. Run `node --check assets/stellar-site.js` and `node scripts/check-portfolio.mjs`.
+1. Run `node --check assets/stellar-site.js`, `node scripts/check-portfolio.mjs` and `node scripts/test-readme.mjs`. Work directly on `main`; do not create branches or force-push.
 2. Verify the new visual site in **real browsers**, especially 320, 390, 768, 1024 and 1440 CSS pixels, with actual screenshots and keyboard navigation. A static check is not a browser screenshot test.
 3. Verify project references open the intended public repository and referenced evidence.
 4. Verify WeChat QR scanning in the actual WeChat client (ideally two separate devices). Programmatic decoding cannot guarantee app behavior.
@@ -59,3 +60,7 @@ Each source has its own license. This site intentionally ships independent, orig
 6. When real project screenshots or videos are available and owner-approved, replace some concept visuals with authentic demonstrations and concise case studies, including validation boundaries.
 
 This repository intentionally has no build pipeline or npm dependency for the published site. JavaScript is progressive enhancement; basic content, project links and contact methods remain usable without it.
+
+## Responsive acceptance details
+
+Compare document scroll width with `document.documentElement.clientWidth`, not just `window.innerWidth`: classic desktop scrollbars reduce the available width. Inspect heading text ranges and screenshots as well, because clipped containers can hide overflowing text. Verify 320, 360, 390, 768, 1024 and 1440 CSS-pixel viewports in both languages. Mobile navigation must remain available, and project filters must stay hidden when JavaScript is disabled.

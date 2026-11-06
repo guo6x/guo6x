@@ -39,6 +39,17 @@ for (const filename of ["index.html", "en/index.html"]) {
   check(body.includes('src="' + prefix + 'assets/wechat-qr.svg"'), filename + " QR source missing");
   check(body.includes("https://u.wechat.com/"), filename + " QR contact link missing");
   check(body.includes('aria-current="page"'), filename + " missing current language");
+  const localeAnchors = [...body.matchAll(/<a\b[^>]*\blang="(?:zh-CN|en)"[^>]*>/g)].map(m => m[0]);
+  check(localeAnchors.length === 2, filename + " should have two language links");
+  for (const [lang, href] of [["zh-CN", english ? "../" : "./"], ["en", english ? "./" : "./en/"]]) {
+    const tag = localeAnchors.find(a => a.includes('lang="' + lang + '"')) || "";
+    check(tag.includes('href="' + href + '"'), filename + " wrong language destination: " + lang);
+    check(tag.includes('aria-current="page"') === (lang === (english ? "en" : "zh-CN")),
+      filename + " wrong current language state: " + lang);
+  }
+  check(body.includes('class="container mobile-nav"'), filename + " mobile navigation missing");
+  check(body.includes('class="filters" hidden'), filename + " filters must start hidden without JavaScript");
+
   check(body.includes("aria-live="), filename + " filter live region missing");
   check(body.includes("aria-pressed="), filename + " filter button missing");
   check((body.match(/<h1\b/g) || []).length === 1, filename + " should have exactly one H1");
@@ -72,6 +83,50 @@ for (const md of ["README.md", "README.en.md"]) {
   check(s.includes("assets/wechat-qr.svg"), md + " QR missing");
   check(s.includes("u.wechat.com/"), md + " direct contact missing");
   check(s.includes("README.en.md") && s.includes("README.md"), md + " reciprocal language links missing");
+
+  // Profile prose must use real line breaks. Ignore comments and code examples.
+  let fence = null;
+  const lines = s.replace(/<!--[\s\S]*?-->/g, (comment) => comment.replace(/[^\n]/g, " "))
+    .split(/\r?\n/).map((line, i) => {
+      const marker = line.match(/^ {0,3}(\x60{3,}|~{3,})(.*)$/);
+      if (fence) {
+        if (marker && marker[1][0] === fence[0] && marker[1].length >= fence.length
+            && !marker[2].trim()) fence = null;
+        return "";
+      }
+      if (marker) { fence = marker[1]; return ""; }
+      const prose = line.replace(/(\x60+).*?\1(?!\x60)/g, "");
+      check(!/\\[nr]/.test(prose), md + ":" + (i + 1) + " literal newline escape in prose");
+      return line;
+    });
+
+  // Validate the existing three-column project table, not every Markdown dialect.
+  const heading = md === "README.md" ? "## 精选项目" : "## Selected work";
+  const start = lines.findIndex((line) => line.trim() === heading);
+  check(start >= 0, md + " project section missing");
+  if (start >= 0) {
+    const next = lines.findIndex((line, i) => i > start && /^##\s/.test(line));
+    const rows = lines.map((line, i) => ({ line: line.trim(), number: i + 1 }))
+      .slice(start + 1, next < 0 ? lines.length : next)
+      .filter((row) => row.line.startsWith("|"));
+    // Consume escaped pairs before counting pipes: \| is text; \\| is a separator.
+    const cells = rows.map((row) => row.line.replace(/\\./g, "x")
+      .slice(1, -1).split("|").map((cell) => cell.trim()));
+    check(rows.length >= 3, md + " project table missing header, delimiter or data");
+    rows.forEach((row, i) => {
+      check(row.line.endsWith("|") && cells[i].length === 3 && cells[i].every(Boolean),
+        md + ":" + row.number + " project table must have three non-empty cells");
+      if (i > 0) check(row.number === rows[i - 1].number + 1,
+        md + ":" + row.number + " project table rows must be contiguous");
+    });
+    check(cells[1]?.length === 3 && cells[1].every((cell) => /^:?-+:?$/.test(cell)),
+      md + " invalid project table delimiter row");
+    for (const project of ["dsh-pilot", "LocalMiniDrama"]) {
+      const occurrences = cells.slice(2).filter(([name]) => name.replace(/\*\*/g, "")
+        .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1") === project).length;
+      check(occurrences === 1, md + " expected one standalone row for " + project);
+    }
+  }
 }
 
 for (const svg of ["stellar-orbit", "stellar-banner", "project-rocket", "project-agent", "project-cad", "wechat-qr", "favicon"]) {

@@ -37,7 +37,11 @@
     }
   }));
 
-  const links = Array.from(document.querySelectorAll(".nav-list a[href^='#']"));
+  // Reveal filters only after their handlers are installed; no dead controls without JS.
+  const filterGroup = document.querySelector(".filters");
+  if (filterGroup && filters.length && projects.length) filterGroup.hidden = false;
+
+  const links = Array.from(document.querySelectorAll(".nav-list a[href^='#'], .mobile-nav a[href^='#']"));
   if ("IntersectionObserver" in window && links.length) {
     const targets = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
     const observer = new IntersectionObserver((entries) => {
