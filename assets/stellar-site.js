@@ -30,6 +30,8 @@
       item.hidden = !match;
       if (match) visible += 1;
     });
+    // Filtering changes document height even when the viewport does not scroll.
+    updateProgress();
     if (live) {
       live.textContent = document.documentElement.lang === "en"
         ? visible + " projects shown"
